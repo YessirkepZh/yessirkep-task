@@ -1,0 +1,26 @@
+[
+  {
+    "name": "benford",
+    "path": "/benford",
+    "component": "/Users/yessirkepzhuman/projects/test/yessirkep-task/pages/benford.vue",
+    "chunkName": "pages/benford"
+  },
+  {
+    "name": "stack",
+    "path": "/stack",
+    "component": "/Users/yessirkepzhuman/projects/test/yessirkep-task/pages/stack.vue",
+    "chunkName": "pages/stack"
+  },
+  {
+    "name": "widget",
+    "path": "/widget",
+    "component": "/Users/yessirkepzhuman/projects/test/yessirkep-task/pages/widget.vue",
+    "chunkName": "pages/widget"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/yessirkepzhuman/projects/test/yessirkep-task/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
