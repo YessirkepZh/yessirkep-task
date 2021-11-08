@@ -1,7 +1,17 @@
 <template>
-  <Tutorial/>
+  <div class="f-screen">
+    <Start />
+    <Footer />
+  </div>
 </template>
 
 <script>
-export default {}
+import Start from '@/components/Start.vue';
+import Footer from '@/components/Footer.vue';
+export default {
+  components: {
+    Start,
+    Footer
+  }
+}
 </script>
