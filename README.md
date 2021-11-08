@@ -1,23 +1,18 @@
-# nuxt_seed
+## The Benny App
 
-> seed for new projects based on nuxtJs
+**The Benny App** is a Vue-Flask app that compares *.csv* files to **[Benford's Law](https://en.wikipedia.org/wiki/Benford's_law)**.
 
-## Build Setup
+Users may upload a **.csv** file and select any column to see how its numerical distribution compares to Benford's.
 
-```bash
-# install dependencies
-$ npm install
+The **Live App** is available on **[Heroku](https://the-benny-app.herokuapp.com/)**.
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
+A **Docker Image** is available on **[Docker Hub](https://hub.docker.com/r/stcybrdgs/scb-apps)**.
 
 ```
+docker pull stcybrdgs/scb-apps:thebennyapp
+docker run -p 5000:80 stcybrdgs/scb-apps:thebennyapp
+```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+After issuing the run command locally, you may view the app in your browser at **localhost:5000**.
+
+Within the Docker container, the Flask app serves to port 80.
