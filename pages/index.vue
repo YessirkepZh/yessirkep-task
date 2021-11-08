@@ -1,7 +1,7 @@
 <template>
   <div class="f-screen">
     <Start />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
