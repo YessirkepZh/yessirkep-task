@@ -5,9 +5,9 @@
         <div class="flex justify-center">
           <div class="flex flex-col">
             <h2 class="text-2xl text-red-800 font-medium mb-3 text-center">Challenges:</h2>
-            <a href="../static/assets/files/Challenge1.pdf" target="_blank">1. Widgets</a>
+            <a href="../assets/files/Challenge2.pdf" target="_blank">1. Widgets</a>
             <nuxt-link to="challenge" class="my-1">2. Benford's Law</nuxt-link>
-            <a href="../static/assets/files/Challenge1.pdf" target="_blank">3. Python Stack Trace Interpretation</a>
+            <a href="../assets/files/Challenge1.pdf" target="_blank">3. Python Stack Trace Interpretation</a>
           </div>
           
         </div>
