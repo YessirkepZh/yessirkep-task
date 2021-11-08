@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  nuxt:
+    container_name: nuxt_seed
+    build: ./
+    environment:
+      PROCESS: DEV
+    volumes:
+      - ./:/client:rw
+    ports:
+      - 7880:7880

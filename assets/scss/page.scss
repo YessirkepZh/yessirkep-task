@@ -1,0 +1,46 @@
+@import './mixin.scss';
+
+.page_title {
+  color: $default_dark_gray_color;
+  font-family: $default_bold_font;
+  font-size: 25px;
+}
+
+.input-title {
+  color: $default_dark_gray_color;
+  font-family: $default_bold_font;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.input-description {
+  color: $default_gray_title_color;
+  font-family: $default_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.default-btn {
+  font-family: $default_demi_font;
+  letter-spacing: normal;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: none;
+}
+
+.validation-alert {
+  color: #e43a35;
+  font-family: $default_font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+.w150{
+  width: 150px !important;
+}

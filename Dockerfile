@@ -1,22 +1,10 @@
-# Dockerfile
-FROM node:11.13.0-alpine
+FROM  docker-proxy.choco.kz/node:14.15.5-alpine
 
-# create destination directory
-RUN mkdir -p /usr/src/nuxt-app
-WORKDIR /usr/src/nuxt-app
+COPY . /client
+WORKDIR /client
 
-# update and install dependency
-RUN apk update && apk upgrade
-RUN apk add git
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirror.neolabs.kz/g' /etc/apk/repositories \
+    && apk update && apk add bash \
+    && npm i
 
-# copy the app, note .dockerignore
-COPY . /usr/src/nuxt-app/
-RUN npm install
-RUN npm run build
-
-EXPOSE 3000
-
-ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=3000
-
-CMD [ "npm", "start" ]
+CMD ["./entrypoint.sh"]

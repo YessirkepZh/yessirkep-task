@@ -1,25 +1,47 @@
 <template>
-  <div class="f-screen">
-    <head>
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-      <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">   
-    </head>
-    <start />
-    <!-- <Footer /> -->
-    <modal-full-screen />
-  </div>
+  <v-layout
+    column justify-center align-center class="wrapper"
+  >
+    <div v-for="item in response" :key="item.id">
+      <span class="span">
+        {{item.userId}}
+        <span :class="!item.completed ? 'red-c' : 'green-c'">
+          {{item.title}}
+        </span>
+      </span>
+    </div>
+  </v-layout>
 </template>
 
 <script>
-import Start from '@/components/base/Start.vue';
-import ModalFullScreen from '@/components/share/ModalFullScreen.vue';
+import { testRequest } from '@/api/api';
 
-// import Footer from '@/components/Footer.vue';
 export default {
-  components: {
-    Start,
-    ModalFullScreen
-    // Footer
+  components: {},
+  data() {
+    return {
+      response: null,
+    };
+  },
+  async fetch() {
+    await testRequest()
+      .then((response) => { this.response = response; });
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@import "assets/scss/mixin.scss";
+.wrapper {
+  background-color: $default_gray_color;
+  .span {
+    color: #ffc804;
+    .red-c {
+      color: #fc5b5b;
+    }
+    .green-c {
+      color: #3bd43b;
+    }
   }
 }
-</script>
+</style>
